@@ -5,7 +5,6 @@
  */
 package entity;
 
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -14,26 +13,36 @@ import javax.persistence.Id;
  *
  * @author Pernille
  */
-@Entity
-public class InfoEntity
+public class CityInfo
 {
-   @Id
+    @Id
      @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String email;
+    private String zipCode;
+    private String city;
 
-    public InfoEntity()
+    public CityInfo()
     {
     }
 
-    public String getEmail()
+    public String getZipCode()
     {
-        return email;
+        return zipCode;
     }
 
-    public void setEmail(String email)
+    public void setZipCode(String zipCode)
     {
-        this.email = email;
+        this.zipCode = zipCode;
+    }
+
+    public String getCity()
+    {
+        return city;
+    }
+
+    public void setCity(String city)
+    {
+        this.city = city;
     }
 
     public long getId()
