@@ -5,6 +5,7 @@
  */
 package entity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -15,7 +16,7 @@ import javax.persistence.ManyToMany;
  * @author Jeanette
  */
 @Entity
-public class Person
+public class Person extends InfoEntity 
 {
     @Id
     private long id;
