@@ -5,25 +5,27 @@
  */
 package entity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 /**
  *
  * @author Pernille
  */
 @Entity
-public class InfoEntity
+public class InfoEntity implements Serializable
 {
-   @Id
-     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String email;
-    
+
     private ArrayList<Phone> phoneList = new ArrayList();
 
     public InfoEntity()

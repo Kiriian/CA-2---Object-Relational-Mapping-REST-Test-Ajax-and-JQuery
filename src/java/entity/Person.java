@@ -18,7 +18,7 @@ import javax.persistence.ManyToMany;
  * @author Jeanette
  */
 @Entity
-public class Person extends InfoEntity 
+public class Person extends InfoEntity implements Serializable
 {
     @Id
      @GeneratedValue(strategy = GenerationType.IDENTITY)

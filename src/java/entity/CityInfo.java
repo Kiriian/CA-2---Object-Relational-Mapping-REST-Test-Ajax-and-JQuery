@@ -5,6 +5,7 @@
  */
 package entity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,7 +17,7 @@ import javax.persistence.Id;
  * @author Pernille
  */
 @Entity
-public class CityInfo
+public class CityInfo implements Serializable
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
