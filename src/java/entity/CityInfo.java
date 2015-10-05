@@ -5,6 +5,8 @@
  */
 package entity;
 
+import java.util.ArrayList;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -13,13 +15,16 @@ import javax.persistence.Id;
  *
  * @author Pernille
  */
+@Entity
 public class CityInfo
 {
     @Id
-     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String zipCode;
     private String city;
+    
+     private ArrayList<Address> address = new ArrayList();
 
     public CityInfo()
     {

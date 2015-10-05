@@ -5,6 +5,8 @@
  */
 package entity;
 
+import java.util.ArrayList;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -13,6 +15,7 @@ import javax.persistence.Id;
  *
  * @author Pernille
  */
+@Entity
 public class Address
 {
     @Id
@@ -20,6 +23,8 @@ public class Address
     private long id;
     private String street;
     private String additionalInfo;
+    
+    private ArrayList<InfoEntity> infoE = new ArrayList();
 
     public Address()
     {
