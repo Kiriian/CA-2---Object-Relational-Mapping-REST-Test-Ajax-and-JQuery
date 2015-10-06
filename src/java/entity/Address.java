@@ -11,6 +11,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -25,7 +26,11 @@ public class Address implements Serializable
     private String street;
     private String additionalInfo;
     
+    @OneToMany
     private ArrayList<InfoEntity> infoE = new ArrayList();
+    
+    @OneToMany
+     private ArrayList<CityInfo> cI = new ArrayList();
 
     public Address()
     {

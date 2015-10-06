@@ -25,7 +25,8 @@ public class InfoEntity implements Serializable
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String email;
-
+    
+    @OneToMany
     private ArrayList<Phone> phoneList = new ArrayList();
 
     public InfoEntity()
