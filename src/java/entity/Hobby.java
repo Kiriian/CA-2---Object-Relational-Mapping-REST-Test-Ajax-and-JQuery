@@ -20,7 +20,6 @@ import javax.persistence.ManyToMany;
 @Entity
 public class Hobby implements Serializable
 {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;

@@ -20,9 +20,6 @@ import javax.persistence.ManyToMany;
 @Entity
 public class Person extends InfoEntity implements Serializable
 {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
     private String firstName;
     private String lastName;
     @ManyToMany
@@ -32,22 +29,12 @@ public class Person extends InfoEntity implements Serializable
     {
     }
 
-    public Person(long id, String firstName, String lastName)
+    public Person(String firstName, String lastName)
     {
-        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
     }
-   
-    public long getId()
-    {
-        return id;
-    }
 
-    public void setId(long id)
-    {
-        this.id = id;
-    }
 
     public String getFirstName()
     {
