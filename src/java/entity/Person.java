@@ -21,7 +21,7 @@ import javax.persistence.ManyToMany;
 public class Person extends InfoEntity implements Serializable
 {
     @Id
-     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String firstName;
     private String lastName;
